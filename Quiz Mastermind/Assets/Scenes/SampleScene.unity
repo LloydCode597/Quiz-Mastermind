@@ -855,6 +855,8 @@ MonoBehaviour:
   - {fileID: 876854845}
   - {fileID: 1716219967}
   - {fileID: 449467820}
+  defaultAnswerSprite: {fileID: 21300000, guid: dacef352891bb8444952b3a8bab893fe, type: 3}
+  correctAnswerSprite: {fileID: 21300000, guid: 3872f03ea47fcc6418da950af564f3b1, type: 3}
 --- !u!1 &777385818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1519,34 @@ PrefabInstance:
     - target: {fileID: 7171471112029936414, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341903935285088755, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341903935285088755, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341903935285088755, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 762461860}
+    - target: {fileID: 7341903935285088755, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341903935285088755, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAnswerSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341903935285088755, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Quiz, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341903935285088755, guid: 97e84f2a7797e38469f3dc17071eb902, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

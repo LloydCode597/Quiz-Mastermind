@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Which of the following is not a role in game development project management?
   answers:
+  - Implementation Consultant
+  - Software Programmer
   - Producer
   - Tester
-  - Software Programmer
-  - Implementation Consultant
-  correctAnswerIndex: 3
+  correctAnswerIndex: 0

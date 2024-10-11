@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 2
   m_EditorClassIdentifier: 
   question: What is a variable?
+  answers:
+  - A function that executes a specific task.
+  - A symbol that represents a value that can change.
+  - A tool used for debugging code.
+  - A method for storing entire programs.
+  correctAnswerIndex: 1

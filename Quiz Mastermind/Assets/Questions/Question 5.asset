@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 5
   m_EditorClassIdentifier: 
   question: Which of the following is not a role in game development project management?
+  answers:
+  - Producer
+  - Game Designer
+  - Texture Artist
+  - Scrum Master
+  correctAnswerIndex: 2

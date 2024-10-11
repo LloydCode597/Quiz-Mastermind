@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 3
   m_EditorClassIdentifier: 
   question: What programming language do Unity use?
+  answers:
+  - Java
+  - Python
+  - C#
+  - Ruby
+  correctAnswerIndex: 2

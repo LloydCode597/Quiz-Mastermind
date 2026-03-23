@@ -1,54 +1,41 @@
-# Mastermind – Unity 2D
+# Quiz Master – Unity 2D Quiz Game
 
-A digital implementation of the classic code-breaking board game **Mastermind** built in **Unity** using **C#**.
-
-The player attempts to guess a secret sequence of colored pegs within a limited number of turns. After each guess, the game provides feedback in the form of black and white key pegs:
-- **Black peg** → correct color in the correct position
-- **White peg** → correct color in the wrong position
+A clean, multiple-choice quiz game developed as part of the **Complete C# Unity Game Developer 2D** course (GameDev.tv / Udemy).  
+The project demonstrates core Unity UI workflows, data-driven design with ScriptableObjects, basic game flow management, and responsive user interaction.
 
 ## Project Overview
 
-This project was created as part of learning objectives in 2D game development, UI systems, scripting logic, and state management in Unity. It demonstrates:
+Quiz Master is a single-player 2D quiz application where players answer a series of multiple-choice questions within a time limit.  
+Correct answers increase the score; the game ends when all questions are answered or time runs out, displaying final results with an option to replay.
 
-- Grid-based UI layout using Unity UI (Canvas, Grid Layout Group, Buttons/Images)
-- Drag-and-drop or click-to-place interaction for code pegs
-- Procedural generation of secret codes
-- Scoring logic for black/white peg feedback
-- Win/lose conditions and turn limiting
-- Clean separation of concerns (Game Manager, Board Manager, Code Peg logic)
+### Key Learning Objectives Demonstrated
+
+- Unity UI system (Canvas, TextMeshProUGUI, Buttons, Sliders, Images)
+- ScriptableObjects for storing reusable question data (question text, answers, correct index)
+- C# fundamentals: Lists, Arrays, for-loops, getter methods, events
+- Scene management and reloading
+- Simple state machines / game manager pattern
+- UI feedback (button states, timer visualization, score tracking)
 
 ## Features
 
-- Classic 4-peg secret code with 6 possible colors (extendable)
-- 10–12 guess attempts (configurable)
-- Real-time feedback display using black and white peg indicators
-- Visual distinction between peg colors (red, green, blue, yellow, orange, purple, etc.)
-- Simple win/lose screens with restart option
-- Optional sound effects and animations (if implemented)
+- Multiple-choice questions with four answer options
+- Randomized or sequential question order
+- Per-question countdown timer with visual fill bar
+- Real-time score tracking
+- End-screen summary (final score, replay button)
+- Data-driven design: questions stored as ScriptableObject assets (easy to expand or modify without code changes)
+- Clean separation of concerns (UI, GameManager, Question data)
 
-## Technologies Used
+## Technologies & Versions
 
-- **Unity**     2021.3 LTS – 2023.x / Unity 6 (project-dependent version)
-- **C#**        scripting language
-- **Unity UI**  (uGUI) for board, pegs, and feedback display
-- **ScriptableObjects** (optional) for color definitions or game settings
-- No external asset store packages required (pure Unity features)
+- **Engine**: Unity 2021.1+ (course originally built here; compatible with Unity 6 as of 2025/2026 updates)
+- **Language**: C# (modern syntax used in course)
+- **UI**: TextMeshPro, uGUI (Canvas Scaler + Layout Groups)
+- **Assets**: Minimal – sprites for button states, background, timer fill
 
-## How to Play
+No external packages are required beyond Unity's built-in features and TextMeshPro (imported via Package Manager).
 
-1. Observe the empty board with guess rows.
-2. Select colors from the palette (bottom or side).
-3. Fill one complete row with 4 colored pegs.
-4. Submit the guess (button or auto-submit when full).
-5. View feedback:
-   - Black peg = right color + right position
-   - White peg = right color + wrong position
-6. Continue until you guess the code or run out of turns.
+## Project Structure (Typical Course Layout)
 
-Goal: Deduce the secret code in as few attempts as possible.
-
-## Installation & Running
-
-1. Clone or download the repository:
-   ```bash
    git clone https://github.com/yourusername/mastermind-unity.git

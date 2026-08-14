@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         quiz = FindObjectOfType<Quiz>();
-        endScreen = FindObjectOfType<EndScreen>();
+        endScreen = FindFirstObjectByType<EndScreen>();
     }
 
     void Start()

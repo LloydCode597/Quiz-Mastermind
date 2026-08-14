@@ -33,18 +33,18 @@ public class Quiz : MonoBehaviour
 
     void Awake()
     {
-        timer = FindObjectOfType<Timer>();
-        GetInitialQuestion(); //had to add to remove NULL REF EXCEPTION
-        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        timer = FindFirstObjectByType<Timer>();
+        PickRandomQuestion();
+        scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
         progressBar.maxValue = questions.Count;
         progressBar.value = 0;
-
     }
 
-    void GetInitialQuestion() //had to add to remove NULL REF EXCEPTION
+    void PickRandomQuestion()
     {
         int index = Random.Range(0, questions.Count);
         currentQuestion = questions[index];
+        questions.RemoveAt(index);
     }
 
     void LateUpdate()
@@ -105,24 +105,11 @@ public class Quiz : MonoBehaviour
         {
             SetButtonState(true);
             SetDefaultButtonSprites();
-            GetRandomQuestion();
+            PickRandomQuestion();
             DisplayQuestion();
             progressBar.value++;
             scoreKeeper.IncrementQuestionsSeen();
         }
-    }
-
-    void GetRandomQuestion()
-    {
-        /* int index = Random.Range(0, questions.Count);
-        currentQuestion = questions [index]; */
-
-        GetInitialQuestion(); //had to add to remove NULL REF EXCEPTION
-        if (questions.Contains(currentQuestion))
-        {
-            questions.Remove(currentQuestion);
-        }
-
     }
 
     void DisplayQuestion()
@@ -154,7 +141,6 @@ public class Quiz : MonoBehaviour
         }
     }
 }
-
 
 
 

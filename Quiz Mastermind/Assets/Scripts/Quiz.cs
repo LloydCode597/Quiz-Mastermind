@@ -38,6 +38,7 @@ public class Quiz : MonoBehaviour
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
         progressBar.maxValue = questions.Count;
         progressBar.value = 0;
+        AudioManager.Instance.PlayQuizMusic();
     }
 
     void PickRandomQuestion()
@@ -72,6 +73,15 @@ public class Quiz : MonoBehaviour
     public void OnAnswerSelected(int index)
     {
         hasAnsweredEarly = true;
+        AudioManager.Instance.PauseMusic();
+        if (index == currentQuestion.GetCorrectAnswerIndex())
+        {
+            AudioManager.Instance.PlayCorrectSFX();
+        }
+        else
+        {
+            AudioManager.Instance.PlayWrongSFX();
+        }
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
@@ -103,6 +113,7 @@ public class Quiz : MonoBehaviour
     {
         if (questions.Count > 0)
         {
+            AudioManager.Instance.ResumeMusic();
             SetButtonState(true);
             SetDefaultButtonSprites();
             PickRandomQuestion();

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     Quiz quiz;
     EndScreen endScreen;
+    bool hasEnded;
 
     void Awake()
     {
@@ -22,8 +23,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (quiz.isComplete)
+        if (quiz.isComplete && !hasEnded)
         {
+            hasEnded = true;
             quiz.gameObject.SetActive(false);
             endScreen.gameObject.SetActive(true);
             endScreen.ShowFinalScore();

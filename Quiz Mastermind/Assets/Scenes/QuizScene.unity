@@ -402,8 +402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 208380639}
-  quizMusic: {fileID: 8300000, guid: 25e5c0dd38314094f84dbd26e60d6098, type: 3}
-  endMusic: {fileID: 8300000, guid: 8abf26fc9b08d5841aefa03cae5d243a, type: 3}
+  quizMusic: {fileID: 8300000, guid: 8abf26fc9b08d5841aefa03cae5d243a, type: 3}
+  endMusic: {fileID: 8300000, guid: 25e5c0dd38314094f84dbd26e60d6098, type: 3}
   sfxSource: {fileID: 208380642}
   correctSFX: {fileID: 8300000, guid: 0296c1e3891f5fb4a8069c99e6c150d5, type: 3}
   wrongSFX: {fileID: 8300000, guid: e32f1b71c0b1b564d88698ba9db82139, type: 3}

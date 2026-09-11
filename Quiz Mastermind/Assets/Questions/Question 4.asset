@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8224d089731c47e429c2bcb2c6691dde, type: 3}
   m_Name: Question 4
   m_EditorClassIdentifier: 
-  question: What is a while loop?
+  question: What is the chemical symbol for gold?
   answers:
-  - A function that repeats code indefinitely.
-  - A loop that runs code a fixed number of times.
-  - A loop that runs as long as a condition is true.
-  - A loop that repeats a code block randomly.
-  correctAnswerIndex: 0
+  - Ag
+  - Au
+  - Gd
+  - Go
+  correctAnswerIndex: 1

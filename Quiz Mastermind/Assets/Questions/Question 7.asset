@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8224d089731c47e429c2bcb2c6691dde, type: 3}
   m_Name: Question 7
   m_EditorClassIdentifier: 
-  question: Which of the following is not a role in game development project management?
+  question: How many continents are there on Earth?
   answers:
   - 5
   - 6

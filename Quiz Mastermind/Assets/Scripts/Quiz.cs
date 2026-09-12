@@ -34,10 +34,10 @@ public class Quiz : MonoBehaviour
     void Awake()
     {
         timer = FindFirstObjectByType<Timer>();
-        PickRandomQuestion();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
-        progressBar.maxValue = questions.Count;
+        progressBar.maxValue = questions.Count;       // read the FULL count first
         progressBar.value = 0;
+        PickRandomQuestion();                          // then remove the first question
         AudioManager.Instance.PlayQuizMusic();
     }
 
@@ -65,8 +65,10 @@ public class Quiz : MonoBehaviour
         }
         else if (!hasAnsweredEarly && !timer.isAnsweringQuestion)
         {
+            hasAnsweredEarly = true;   // NEW — stops this branch from firing every frame
             DisplayAnswer(-1);
             SetButtonState(false);
+            progressBar.value++;       // NEW — count this question as resolved (timed out)
         }
     }
 
@@ -85,9 +87,9 @@ public class Quiz : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+        progressBar.value++;   // NEW — count this question as resolved right when answered
         scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
     }
-
     void DisplayAnswer(int index)
     {
         Image buttonImage;
@@ -118,8 +120,8 @@ public class Quiz : MonoBehaviour
             SetDefaultButtonSprites();
             PickRandomQuestion();
             DisplayQuestion();
-            progressBar.value++;
             scoreKeeper.IncrementQuestionsSeen();
+            // progressBar.value++ removed — handled in OnAnswerSelected / LateUpdate now
         }
     }
 

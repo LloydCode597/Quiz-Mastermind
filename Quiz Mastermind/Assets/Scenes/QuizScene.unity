@@ -1423,6 +1423,7 @@ MonoBehaviour:
   timerImage: {fileID: 506592538}
   scoreText: {fileID: 1517390443}
   progressBar: {fileID: 1834098107}
+  progressBarFill: {fileID: 613184616}
   isComplete: 0
 --- !u!1 &777385818
 GameObject:

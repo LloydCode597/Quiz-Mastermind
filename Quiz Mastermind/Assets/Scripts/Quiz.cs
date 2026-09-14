@@ -29,6 +29,7 @@ public class Quiz : MonoBehaviour
 
     [Header("ProgressBar")]
     [SerializeField] Slider progressBar;
+    [SerializeField] Image progressBarFill;
     public bool isComplete;
 
     void Awake()
@@ -37,6 +38,7 @@ public class Quiz : MonoBehaviour
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
         progressBar.maxValue = questions.Count;       // read the FULL count first
         progressBar.value = 0;
+        progressBarFill.enabled = false;
         PickRandomQuestion();                          // then remove the first question
         AudioManager.Instance.PlayQuizMusic();
     }
@@ -69,6 +71,7 @@ public class Quiz : MonoBehaviour
             DisplayAnswer(-1);
             SetButtonState(false);
             progressBar.value++;       // NEW — count this question as resolved (timed out)
+            progressBarFill.enabled = true;
         }
     }
 
@@ -88,6 +91,7 @@ public class Quiz : MonoBehaviour
         SetButtonState(false);
         timer.CancelTimer();
         progressBar.value++;   // NEW — count this question as resolved right when answered
+        progressBarFill.enabled = true;
         scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
     }
     void DisplayAnswer(int index)

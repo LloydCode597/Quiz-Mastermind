@@ -36,6 +36,3 @@ Correct answers increase the score; the game ends when all questions are answere
 
 No external packages are required beyond Unity's built-in features and TextMeshPro (imported via Package Manager).
 
-## Project Structure (Typical Course Layout)
-
-   git clone https://github.com/yourusername/mastermind-unity.git

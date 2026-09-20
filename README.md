@@ -1,4 +1,4 @@
-# Quiz Master – Unity 2D Quiz Game
+# Quiz Master – Unity 2D QuizGame
 
 A clean, multiple-choice quiz game developed as part of the **Complete C# Unity Game Developer 2D** course (GameDev.tv / Udemy).  
 The project demonstrates core Unity UI workflows, data-driven design with ScriptableObjects, basic game flow management, and responsive user interaction.
@@ -36,6 +36,3 @@ Correct answers increase the score; the game ends when all questions are answere
 
 No external packages are required beyond Unity's built-in features and TextMeshPro (imported via Package Manager).
 
-## Project Structure (Typical Course Layout)
-
-   git clone https://github.com/yourusername/mastermind-unity.git

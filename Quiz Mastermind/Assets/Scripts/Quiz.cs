@@ -36,11 +36,13 @@ public class Quiz : MonoBehaviour
     {
         timer = FindFirstObjectByType<Timer>();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
-        progressBar.maxValue = questions.Count;       // read the FULL count first
+        progressBar.maxValue = questions.Count;
         progressBar.value = 0;
         progressBarFill.enabled = false;
-        PickRandomQuestion();                          // then remove the first question
         AudioManager.Instance.PlayQuizMusic();
+        // PickRandomQuestion() removed — the first LateUpdate cycle already
+        // triggers GetNextQuestion() naturally via Timer's own startup tick,
+        // so calling it here was picking (and discarding) an extra question.
     }
 
     void PickRandomQuestion()
